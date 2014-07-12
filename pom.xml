@@ -8,6 +8,10 @@
     <version>1.0-SNAPSHOT</version>
     <name>spring-training</name>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <!-- Unit test-->
@@ -37,5 +41,6 @@
 
     <modules>
         <module>webapp</module>
-    </modules>
+    <module>logging</module>
+  </modules>
 </project>
