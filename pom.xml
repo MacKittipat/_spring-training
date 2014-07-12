@@ -35,12 +35,9 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <finalName>spring-training</finalName>
-    </build>
-
     <modules>
         <module>webapp</module>
-    <module>logging</module>
-  </modules>
+        <module>logging</module>
+    </modules>
+
 </project>

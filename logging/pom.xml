@@ -28,6 +28,10 @@
         </dependency>
     </dependencies>
 
+    <!--
+        When run "mvn clean install",
+        maven generate jar with name "logging.jar" instead of "logging-1.0-SNAPSHOT.jar"
+    -->
     <build>
         <finalName>logging</finalName>
     </build>
