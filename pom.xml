@@ -61,6 +61,7 @@
     <modules>
         <module>webapp</module>
         <module>logging</module>
+        <module>ioc</module>
     </modules>
 
 </project>
