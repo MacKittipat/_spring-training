@@ -1,5 +1,6 @@
 package com.mackittipat.springtraining.ioc;
 
+import com.mackittipat.springtraining.ioc.bean.People;
 import com.mackittipat.springtraining.ioc.bean.User;
 import com.mackittipat.springtraining.ioc.service.UserService;
 import org.slf4j.Logger;
@@ -19,5 +20,9 @@ public class App {
 
         User user = (User) applicationContext.getBean("user");
         log.debug("User (address = {})", user.getAddress().getProvince());
+
+        People people = (People) applicationContext.getBean("people");
+        log.debug("People (address = {})", people.getAddress().getProvince());
+
     }
 }

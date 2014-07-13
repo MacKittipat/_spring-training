@@ -3,6 +3,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="address" class="com.mackittipat.springtraining.ioc.bean.Address">
+        <property name="province" value="Some where in this world" />
+    </bean>
+
     <!-- Instantiation bean with a constructor -->
     <bean id="userService" class="com.mackittipat.springtraining.ioc.service.UserService" />
 
@@ -11,7 +15,9 @@
         <constructor-arg ref="address" />
     </bean>
 
-    <bean id="address" class="com.mackittipat.springtraining.ioc.bean.Address">
-        <property name="province" value="Some where in this world" />
+    <!-- Setter-based dependency injection -->
+    <bean id="people" class="com.mackittipat.springtraining.ioc.bean.People">
+        <property name="address" ref="address" />
     </bean>
+
 </beans>
