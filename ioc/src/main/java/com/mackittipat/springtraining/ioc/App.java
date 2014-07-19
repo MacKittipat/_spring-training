@@ -3,6 +3,7 @@ package com.mackittipat.springtraining.ioc;
 import com.mackittipat.springtraining.ioc.bean.Lazy;
 import com.mackittipat.springtraining.ioc.bean.People;
 import com.mackittipat.springtraining.ioc.bean.User;
+import com.mackittipat.springtraining.ioc.bean.autowirebyname.MyCustomer;
 import com.mackittipat.springtraining.ioc.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,5 +28,8 @@ public class App {
 
         log.debug("Initializing Lazy.java");
         Lazy lazy = (Lazy) applicationContext.getBean("lazy");
+
+        MyCustomer myCustomer = (MyCustomer) applicationContext.getBean("myCustomer");
+        log.debug("User name = {}", myCustomer.getMyUser().getName());
     }
 }

@@ -26,4 +26,8 @@
 
     <!-- lazy-init-->
     <bean id="lazy" class="com.mackittipat.springtraining.ioc.bean.Lazy" lazy-init="true" />
+
+    <!-- Autowire by name -->
+    <bean id="myCustomer" class="com.mackittipat.springtraining.ioc.bean.autowirebyname.MyCustomer" autowire="byName" />
+    <bean id="myUser" class="com.mackittipat.springtraining.ioc.bean.autowirebyname.MyUser" />
 </beans>
