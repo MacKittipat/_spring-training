@@ -1,5 +1,6 @@
 package com.mackittipat.springtraining.ioc;
 
+import com.mackittipat.springtraining.ioc.bean.Lazy;
 import com.mackittipat.springtraining.ioc.bean.People;
 import com.mackittipat.springtraining.ioc.bean.User;
 import com.mackittipat.springtraining.ioc.service.UserService;
@@ -24,5 +25,7 @@ public class App {
         People people = (People) applicationContext.getBean("people");
         log.debug("People (address = {})", people.getAddress().getProvince());
 
+        log.debug("Initializing Lazy.java");
+        Lazy lazy = (Lazy) applicationContext.getBean("lazy");
     }
 }

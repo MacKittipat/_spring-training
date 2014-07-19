@@ -24,4 +24,6 @@
     <bean id="after" class="com.mackittipat.springtraining.ioc.bean.After" depends-on="before" />
     <bean id="before" class="com.mackittipat.springtraining.ioc.bean.Before" />
 
+    <!-- lazy-init-->
+    <bean id="lazy" class="com.mackittipat.springtraining.ioc.bean.Lazy" lazy-init="true" />
 </beans>
