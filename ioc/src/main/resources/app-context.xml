@@ -20,4 +20,8 @@
         <property name="address" ref="address" />
     </bean>
 
+    <!-- depend-on -->
+    <bean id="after" class="com.mackittipat.springtraining.ioc.bean.After" depends-on="before" />
+    <bean id="before" class="com.mackittipat.springtraining.ioc.bean.Before" />
+
 </beans>
