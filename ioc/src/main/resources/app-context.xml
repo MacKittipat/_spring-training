@@ -30,4 +30,10 @@
     <!-- Autowire by name -->
     <bean id="myCustomer" class="com.mackittipat.springtraining.ioc.bean.autowirebyname.MyCustomer" autowire="byName" />
     <bean id="myUser" class="com.mackittipat.springtraining.ioc.bean.autowirebyname.MyUser" />
+
+    <!-- Bean scope singleton -->
+    <bean id="sin" class="com.mackittipat.springtraining.ioc.bean.beanscope.Singleton" />
+    <!-- Bean scope prototype -->
+    <bean id="pro" class="com.mackittipat.springtraining.ioc.bean.beanscope.Prototype" scope="prototype" />
+
 </beans>

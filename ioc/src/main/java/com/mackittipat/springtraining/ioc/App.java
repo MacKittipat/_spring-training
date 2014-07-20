@@ -4,6 +4,8 @@ import com.mackittipat.springtraining.ioc.bean.Lazy;
 import com.mackittipat.springtraining.ioc.bean.People;
 import com.mackittipat.springtraining.ioc.bean.User;
 import com.mackittipat.springtraining.ioc.bean.autowirebyname.MyCustomer;
+import com.mackittipat.springtraining.ioc.bean.beanscope.Prototype;
+import com.mackittipat.springtraining.ioc.bean.beanscope.Singleton;
 import com.mackittipat.springtraining.ioc.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,5 +33,15 @@ public class App {
 
         MyCustomer myCustomer = (MyCustomer) applicationContext.getBean("myCustomer");
         log.debug("User name = {}", myCustomer.getMyUser().getName());
+
+        Singleton sin1 = (Singleton) applicationContext.getBean("sin");
+        sin1.setName("Sin");
+        Singleton sin2 = (Singleton) applicationContext.getBean("sin");
+        log.debug("Singleton name = {}", sin2.getName());
+
+        Prototype pro1 = (Prototype) applicationContext.getBean("pro");
+        pro1.setName("Pro");
+        Prototype pro2 = (Prototype) applicationContext.getBean("pro");
+        log.debug("Prototype name = {}", pro2.getName());
     }
 }
